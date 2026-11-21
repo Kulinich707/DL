@@ -1,0 +1,13 @@
+{
+  "ultralytics": "8.4.216",
+  "weights": "yolo26n.pt",
+  "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "size_mb": 5.287602424621582,
+  "params": 2572280,
+  "n_classes_coco": 80,
+  "python": "3.12.11",
+  "torch": "2.15.0",
+  "torchvision": "0.29.2",
+  "numpy": "2.5.5",
+  "latency_ms": 29.158652799863678
+}
