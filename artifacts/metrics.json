@@ -1,0 +1,121 @@
+{
+  "track": "cv",
+  "model": "yolo26n.pt",
+  "revision": "ultralytics==8.4.216; sha256=9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "dataset": "BCCD; https://github.com/Shenggan/BCCD_Dataset/tree/d272fb14cdff6e473fafeeeba32aba5f560e9e43; MIT",
+  "classes": [
+    "RBC",
+    "WBC",
+    "Platelets"
+  ],
+  "n_train": 254,
+  "n_val": 54,
+  "n_test": 56,
+  "params_total": 2572280,
+  "baseline": {
+    "split": "test",
+    "coco_map50": 0.0,
+    "heuristic_map50": 0.22028826326234954,
+    "heuristic_ap50_per_class": {
+      "RBC": 0.0,
+      "WBC": 0.6572798141388846,
+      "Platelets": 0.003584975648164058
+    }
+  },
+  "final": {
+    "map50": 0.9411242561218581,
+    "map50_95": 0.6481951563915017,
+    "precision": 0.882034822346134,
+    "recall": 0.9128985507246377,
+    "per_class": {
+      "RBC": {
+        "precision": 0.7829821383160591,
+        "recall": 0.8586956521739131,
+        "map50": 0.9098768709385812,
+        "map50_95": 0.6564758745552493
+      },
+      "WBC": {
+        "precision": 0.9928906496450501,
+        "recall": 1.0,
+        "map50": 0.995,
+        "map50_95": 0.7687646561437178
+      },
+      "Platelets": {
+        "precision": 0.8702316790772927,
+        "recall": 0.88,
+        "map50": 0.9184958974269932,
+        "map50_95": 0.5193449384755382
+      }
+    },
+    "split": "test",
+    "custom_map50": 0.9122733124783625,
+    "custom_ap50": {
+      "RBC": 0.8681832859839824,
+      "WBC": 0.9988547981520828,
+      "Platelets": 0.8697818532990225
+    }
+  },
+  "ablation": {
+    "parameter": "freeze",
+    "values": [
+      0,
+      11
+    ],
+    "split": "val",
+    "full": {
+      "map50": 0.9237385855498955,
+      "map50_95": 0.6373073197594643,
+      "train_time_sec": 1243.99195675
+    },
+    "frozen": {
+      "map50": 0.9068251378868283,
+      "map50_95": 0.5894067817278051,
+      "train_time_sec": 825.7815211670004
+    }
+  },
+  "errors": {
+    "tp": 636,
+    "class": 0,
+    "localization": 37,
+    "background": 382,
+    "missed": 53
+  },
+  "device": "cpu",
+  "train_time_sec": 1243.99195675,
+  "fast_mode": false,
+  "train_args": {
+    "epochs": 40,
+    "imgsz": 640,
+    "batch": 8,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "lrf": 0.05,
+    "weight_decay": 0.0005,
+    "patience": 15,
+    "warmup_epochs": 3,
+    "seed": 0,
+    "deterministic": true,
+    "hsv_h": 0.015,
+    "hsv_s": 0.35,
+    "hsv_v": 0.25,
+    "degrees": 15,
+    "translate": 0.1,
+    "scale": 0.3,
+    "fliplr": 0.5,
+    "flipud": 0.5,
+    "mosaic": 0.5,
+    "close_mosaic": 10,
+    "mixup": 0.0,
+    "amp": false,
+    "cache": false,
+    "plots": true,
+    "val": true,
+    "save": true,
+    "end2end": true
+  },
+  "run_times": {
+    "heuristic": 0.45831770800032245,
+    "train": 1243.99195675,
+    "ablation": 825.7815211670004
+  }
+}

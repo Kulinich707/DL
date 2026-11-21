@@ -1,0 +1,42 @@
+{
+  "stats": {
+    "train": {
+      "images": 254,
+      "objects": [
+        2917,
+        258,
+        257
+      ],
+      "mean_objects": 13.511811023622048,
+      "min_objects": 1,
+      "max_objects": 30
+    },
+    "val": {
+      "images": 54,
+      "objects": [
+        594,
+        56,
+        54
+      ],
+      "mean_objects": 13.037037037037036,
+      "min_objects": 1,
+      "max_objects": 25
+    },
+    "test": {
+      "images": 56,
+      "objects": [
+        644,
+        58,
+        50
+      ],
+      "mean_objects": 13.428571428571429,
+      "min_objects": 2,
+      "max_objects": 24
+    }
+  },
+  "cleaning": {
+    "clipped": 0
+  },
+  "revision": "d272fb14cdff6e473fafeeeba32aba5f560e9e43",
+  "archive_sha256": "e2ed144a0a2c6dbe351f3ddb09fb8ff2c9ad4f947bdf42b6a52dd4f38a996ba9"
+}
